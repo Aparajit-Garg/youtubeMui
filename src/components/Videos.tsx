@@ -6,7 +6,7 @@ import VideoCard from "./VideoCard";
 const Videos = ({ videos }) => {
 	console.log(videos);
 	return (
-		<Stack direction="row" flexWrap="wrap" justifyContent="start" sx={{ display: 'flex' }}>
+		<Stack direction="row" flexWrap="wrap" justifyContent="start">
 			{videos?.map((item, idx: number) => { 
                 return (
                     <Box key={idx}>

@@ -16,7 +16,7 @@ const VideoCard = ({
 	},
 }) => {
 	return (
-		<Card sx={{ margin: '10px', width: { md: '300px', sm: '240px', xs: '100%' }, boxShadow: 'none', borderRadius: 0, backgroundColor: { md: '#000', xs: '#fff'}}}>
+		<Card sx={{ margin: '7px', width: { md: '300px', sm: '240px', xs: '100%' }, boxShadow: 'none', borderRadius: 0, backgroundColor: { md: '#000', xs: '#fff'}}}>
 			<Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
 				<CardMedia
                     component='img'
