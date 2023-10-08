@@ -7,7 +7,7 @@ const Videos = ({ videos }) => {
 	console.log(videos);
 	return (
 		<Stack direction="row" flexWrap="wrap" justifyContent="start" sx={{ display: 'flex' }}>
-			{videos.map((item, idx: number) => { 
+			{videos?.map((item, idx: number) => { 
                 return (
                     <Box key={idx}>
                         {item.id.videoId && <VideoCard video={item} />}

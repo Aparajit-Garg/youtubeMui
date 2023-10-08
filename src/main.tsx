@@ -29,20 +29,20 @@ const appRouter = createBrowserRouter([
             {
                 path: '/',
                 element: <Feed />
+            },
+            {
+                path: '/video/:id',
+                element: <VideoPage />
+            },
+            {
+                path: '/channel/:id',
+                element: <ChannelPage />
+            },
+            {
+                path: '/search/:searchTerm',
+                element: <SearchPage />
             }
         ]
-    },
-    {
-        path: '/video/:id',
-        element: <VideoPage />
-    },
-    {
-        path: '/channel/:id',
-        element: <ChannelPage />
-    },
-    {
-        path: '/search/:searchTerm',
-        element: <SearchPage />
     }
 ]);
 
