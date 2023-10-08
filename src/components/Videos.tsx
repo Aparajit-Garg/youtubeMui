@@ -3,10 +3,11 @@ import { memo } from "react";
 import ChannelCard from "./ChannelCard";
 import VideoCard from "./VideoCard";
 
-const Videos = ({ videos }) => {
+const Videos = ({ videos, direction }) => {
 	console.log(videos);
-	return (
-		<Stack direction="row" flexWrap="wrap" justifyContent="start">
+	if (!videos && !videos?.length) return 'Loading...'
+    return (
+		<Stack direction={direction || "row"} flexWrap="wrap" justifyContent="start">
 			{videos?.map((item, idx: number) => { 
                 return (
                     <Box key={idx}>
