@@ -7,7 +7,6 @@ import { useParams } from "react-router-dom";
 
 const SearchPage: FC = () => {
     const { searchTerm } = useParams();
-    console.log('Search page params: ', searchTerm)
     const [videos, setVideos] = useState([])
 
     useEffect(() => {
@@ -15,13 +14,16 @@ const SearchPage: FC = () => {
     }, [searchTerm])
 
     return (
-        <Box p={2} sx={{ overflowY: 'auto', height: '90vh', flex: 2, backgroundColor: '#000'}}>
-            <Typography variant="h4" fontWeight='bold' mb={2} sx={{ color: '#fff' }}>
+        <Box p={2} minHeight="95vh" sx={{ backgroundColor: '#000' }}>
+            <Typography variant="h4" fontWeight='900' mb={3} sx={{ color: '#fff' }} ml={{ sm: '100px'}} >
                 Search results for:
-                <span style={{ color: '#F31503' }}> {searchTerm} </span>
+                <span style={{ color: '#FC1503' }}> {searchTerm} </span>
             </Typography>
-            <Videos videos={videos} />
-        </Box>
+	    <Box display="flex">
+	    	<Box sx={{ mr: { sm: '100px' }}} />
+            	<Videos videos={videos} />
+            </Box>
+	</Box>
 	);
 };
 

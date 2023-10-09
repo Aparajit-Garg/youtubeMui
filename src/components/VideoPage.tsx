@@ -5,6 +5,7 @@ import { Typography, Box, Stack } from "@mui/material";
 import Videos from "./Videos";
 import { fetchAPI } from "../utils/fetchFromApi";
 import { CheckCircle } from "@mui/icons-material";
+import Loader from "./Loader";
 
 const VideoPage = () => {
 	const { id } = useParams();
@@ -22,7 +23,7 @@ const VideoPage = () => {
 		);
 	}, [id]);
 
-	if (!videoDetail?.snippet) return "Loading...";
+	if (!videoDetail?.snippet) return <Loader />;
 
 	const {
 		snippet: { title, channelId, channelTitle },
@@ -30,23 +31,15 @@ const VideoPage = () => {
 	} = videoDetail;
 
 	return (
-		<Box sx={{ minHeight: "95vh", background: "#000" }} >
+		<Box sx={{ minHeight: "95vh", background: "#000" }}>
 			<Stack direction={{ xs: "column", md: "row" }}>
 				<Box flex={1}>
-					<Box ml={1} mr={1} sx={{ width: "98%", height: {xs:'auto' ,sm:'75vh'}, position: "sticky", top: "86px" }} pb={2}>
-						<iframe
-                            height='90%'
-							width='98%'
-							src={`https://www.youtube.com/embed/${id}?si=ffgsPNaDKFPafZAE`}
-							title="YouTube video player"
-                            allowFullScreen
-						></iframe>
-
-						{/* <ReactPlayer
+					<Box sx={{ width: "100%", position: "sticky", top: "86px" }}>
+						<ReactPlayer
 							url={`https://www.youtube.com/watch?v=${id}`}
 							className="react-player"
 							controls
-						/> */}
+						/>
 						<Typography color="#fff" variant="h5" fontWeight="bold" p={2}>
 							{title}
 						</Typography>
@@ -80,8 +73,7 @@ const VideoPage = () => {
 					</Box>
 				</Box>
 				<Box
-                    px={0}
-					mr={1}
+					px={2}
 					py={{ md: 1, xs: 5 }}
 					justifyContent="center"
 					alignItems="center"

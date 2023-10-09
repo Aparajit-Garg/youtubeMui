@@ -19,7 +19,7 @@ const ChannelPage = () => {
 		);
 	}, [id]);
 	return (
-		<Box minWidth="95vh" sx={{ background: '#000' }}>
+		<Box minHeight="95vh" sx={{ background: '#000' }}>
 			<Box>
 				<div
 					style={{
@@ -31,8 +31,9 @@ const ChannelPage = () => {
 				/>
                 <ChannelCard channelDetail={channelDetail} marginTop='-110px' />
 			</Box>
-            <Box display="flex" p="2" justifyContent='center'>
-                <Videos videos={videoData} />
+            <Box display="flex" p={2}>
+            <Box sx={{ mr: {sm: '100px'} }} />
+                <Videos videos={videoData} direction='row' />
             </Box>
 		</Box>
 	);

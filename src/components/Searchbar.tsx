@@ -4,20 +4,20 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Searchbar = () => {
-    const [searchText, setSearchText] = useState<string>()
-	const navigate = useNavigate()
+	const [searchText, setSearchText] = useState<string>();
+	const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+	const handleSubmit = (e) => {
+		e.preventDefault();
 
-        if (searchText) {
-            console.log(`/search/${searchText}`)
-            navigate(`/search/${searchText}`)
-            setSearchText('')
-        }
-    }
+		if (searchText) {
+			console.log(`/search/${searchText}`);
+			navigate(`/search/${searchText}`);
+			setSearchText("");
+		}
+	};
 
-    return (
+	return (
 		<Paper
 			component="form"
 			onSubmit={handleSubmit}
@@ -30,14 +30,20 @@ const Searchbar = () => {
 			}}
 		>
 			<input
-                className="search-bar"
+				className="search-bar"
 				placeholder="Search"
 				value={searchText}
-				onChange={(e) => {setSearchText(e.target.value)}}
+				onChange={(e) => {
+					setSearchText(e.target.value);
+				}}
 			/>
-            <IconButton type='submit' sx={{ p: '10px', color: 'red' }}>
-                <Search />
-            </IconButton>
+			<IconButton
+				type="submit"
+				sx={{ p: "10px", color: "red" }}
+				aria-label="search"
+			>
+				<Search />
+			</IconButton>
 		</Paper>
 	);
 };
