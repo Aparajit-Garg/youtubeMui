@@ -23,8 +23,8 @@ export const logo: string = 'https://i.ibb.co/4Vxp7S0/icons8-youtube-480.png';
 
 export const categories : Category[] = [
   { name: 'New', icon: <HomeIcon /> },
-  { name: 'JS Mastery', icon: <CodeIcon /> },
-  { name: 'Coding', icon: <CodeIcon /> },
+  { name: 'Learnersbucket', icon: <CodeIcon /> },
+  { name: 'Akshay Saini', icon: <CodeIcon /> },
   { name: 'ReactJS', icon: <CodeIcon /> },
   { name: 'NextJS', icon: <CodeIcon /> },
   { name: 'Music', icon: <MusicNoteIcon /> },
@@ -41,7 +41,7 @@ export const categories : Category[] = [
   { name: 'Crypto', icon: <DeveloperModeIcon />, },
 ];
 
-export const demoThumbnailUrl:string = 'https://i.ibb.co/G2L2Gwp/API-Course.png';
+export const demoThumbnailUrl:string = 'https://yt3.ggpht.com/XnRwBxpHjCxkKo9IVwh-J3M8bqcJEajCF2GmCBMoMWcDpDbAReaUb1gMbT7uM2b6okS1Hc-_=s800-c-k-c0xffffffff-no-rj-mo';
 export const demoChannelUrl:string = '/channel/UC2275rwUB7t9rkZBjPE02eQ';
 export const demoVideoUrl:string = '/video/ki5PtU4HBuM';
 export const demoChannelTitle:string = 'Aparajit Garg';

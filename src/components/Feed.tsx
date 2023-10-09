@@ -13,6 +13,7 @@ const Feed: FC = () => {
 
     const getData = useCallback(async () => {
         console.log(selectedCategory)
+        setVideos(null)
         const data = await fetchAPI(`search?part=snippet&q=${selectedCategory}`)
         setVideos(data.items)
     }, [selectedCategory])
